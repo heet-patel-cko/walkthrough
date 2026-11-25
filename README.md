@@ -73,7 +73,3 @@ To try the builder by hand:
 ```bash
 python3 plugins/walkthrough/skills/create/scripts/build.py plugins/walkthrough/skills/create/references/example.md -o /tmp/example.html && open /tmp/example.html
 ```
-
-## License
-
-MIT. See [LICENSE](LICENSE).
