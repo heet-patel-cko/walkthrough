@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}}</title>
+<style>
+{{css}}
+</style>
+</head>
+<body>
+<div class="layout">
+<nav class="toc" aria-label="Contents">
+  <div class="toc-title">Contents</div>
+  {{toc}}
+</nav>
+<main id="wt-main">
+<h1>{{title}}</h1>
+{{subtitle}}
+<p class="docmeta">{{meta}}</p>
+<div id="wt-changed" hidden></div>
+{{content}}
+</main>
+</div>
+<script type="application/json" id="wt-data">{{data}}</script>
+<script>
+{{js}}
+</script>
+</body>
+</html>

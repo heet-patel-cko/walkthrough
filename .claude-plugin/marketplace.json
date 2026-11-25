@@ -1,0 +1,14 @@
+{
+  "name": "walkthrough",
+  "owner": {
+    "name": "heet-patel-cko"
+  },
+  "plugins": [
+    {
+      "name": "walkthrough",
+      "source": "./plugins/walkthrough",
+      "description": "Turn code, PRs, docs and design reviews into interactive HTML walkthroughs with personal notes you hand back to the AI."
+    }
+  ],
+  "description": "Interactive walkthroughs of code and documents, with personal notes you hand back to the AI."
+}
