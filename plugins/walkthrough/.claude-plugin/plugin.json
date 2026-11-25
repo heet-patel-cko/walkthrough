@@ -1,8 +1,10 @@
 {
   "name": "walkthrough",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Turn code, PRs, docs and design reviews into interactive HTML walkthroughs with personal notes you hand back to the AI.",
   "author": {
     "name": "heet-patel-cko"
-  }
+  },
+  "license": "MIT",
+  "repository": "https://github.com/heet-patel-cko/walkthrough"
 }

@@ -20,7 +20,7 @@ claude plugin marketplace add heet-patel-cko/walkthrough
 claude plugin install walkthrough@walkthrough
 ```
 
-The repo is private, so you need read access to it and a GitHub login on your machine (`gh auth login`). Start a new session after installing. The only requirement is `python3`, which macOS already has.
+Start a new session after installing. The only requirement is `python3`, which macOS already has.
 
 ## Commands
 
@@ -73,3 +73,7 @@ To try the builder by hand:
 ```bash
 python3 plugins/walkthrough/skills/create/scripts/build.py plugins/walkthrough/skills/create/references/example.md -o /tmp/example.html && open /tmp/example.html
 ```
+
+## License
+
+MIT. See [LICENSE](LICENSE).
