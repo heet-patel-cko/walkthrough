@@ -81,6 +81,28 @@
   }
   document.querySelectorAll(".code").forEach(highlight);
 
+  // ---------------------------------------------------------------- glossary tooltips
+  // One fixed-position tip on <body>, so tables or code blocks that scroll sideways can't clip it.
+  var tip = el("div", { "class": "wt-tip", role: "tooltip", id: "wt-tip", hidden: "" });
+  document.body.appendChild(tip);
+  function showTip(t) {
+    tip.textContent = t.getAttribute("data-def"); tip.hidden = false;
+    t.setAttribute("aria-describedby", "wt-tip");
+    var r = t.getBoundingClientRect(), w = tip.offsetWidth, h = tip.offsetHeight, m = 8;
+    var left = Math.min(Math.max(m, r.left), window.innerWidth - w - m);
+    var top = r.bottom + 6;
+    if (top + h > window.innerHeight - m) { top = Math.max(m, r.top - h - 6); }
+    tip.style.left = left + "px"; tip.style.top = top + "px";
+  }
+  function hideTip() { tip.hidden = true; }
+  document.querySelectorAll(".term").forEach(function (t) {
+    t.addEventListener("mouseenter", function () { showTip(t); });
+    t.addEventListener("focus", function () { showTip(t); });
+    t.addEventListener("mouseleave", hideTip);
+    t.addEventListener("blur", hideTip);
+  });
+  window.addEventListener("scroll", hideTip, true);
+
   // ---------------------------------------------------------------- checklists (local only)
   var checks = get("checks", {});
   document.querySelectorAll("input.chk").forEach(function (c) {
